@@ -1,0 +1,68 @@
+2024-09-16 10:12:08 INFO  CheckoutApplication:40 - Application Started Successfully
+2024-09-16 10:12:12 INFO  CheckoutApplication:69 - Key entered is 1
+2024-09-16 10:12:12 INFO  CheckoutApplication:72 - Pricing Rule Process Started
+2024-09-16 10:12:16 INFO  PricingRulesProcessorImpl:50 - Method Execution started for pricing rule process: A | 50
+2024-09-16 10:12:16 INFO  PricingRulesProcessorImpl:91 - Method Execution Started - validateItemRule
+2024-09-16 10:12:16 INFO  PricingRulesProcessorImpl:108 - Method Execution Completed - validateItemRule
+2024-09-16 10:12:16 INFO  PricingRulesProcessorImpl:118 - Method Execution Started - ValidateSpecialOfferRule
+2024-09-16 10:12:16 INFO  PricingRulesProcessorImpl:128 - Method Execution Completed - ValidateSpecialOfferRule
+2024-09-16 10:12:16 INFO  PricingRulesProcessorImpl:81 - Method Execution Completed for pricing rule process: A | 50
+2024-09-16 10:12:17 INFO  PricingRulesProcessorImpl:50 - Method Execution started for pricing rule process: d
+2024-09-16 10:12:17 INFO  PricingRulesProcessorImpl:91 - Method Execution Started - validateItemRule
+2024-09-16 10:12:17 INFO  PricingRulesProcessorImpl:108 - Method Execution Completed - validateItemRule
+2024-09-16 10:12:17 ERROR PricingRulesProcessorImpl:78 - Exception while parsing rule data Invalid user input,d
+com.cdl.supermarket.checkout.exception.InvalidItemException: Invalid user input,d
+	at com.cdl.supermarket.checkout.processor.impl.PricingRulesProcessorImpl.handlePricingRules(PricingRulesProcessorImpl.java:74)
+	at com.cdl.supermarket.checkout.CheckoutApplication.handlePricingRulesInput(CheckoutApplication.java:145)
+	at com.cdl.supermarket.checkout.CheckoutApplication.handleCheckoutProcess(CheckoutApplication.java:74)
+	at com.cdl.supermarket.checkout.CheckoutApplication.main(CheckoutApplication.java:46)
+2024-09-16 10:12:17 INFO  PricingRulesProcessorImpl:81 - Method Execution Completed for pricing rule process: d
+2024-09-16 10:12:21 INFO  CheckoutApplication:75 - Pricing Rule Process Completed
+2024-09-16 10:12:23 INFO  CheckoutApplication:69 - Key entered is 2
+2024-09-16 10:12:23 INFO  CheckoutApplication:79 - Checkout Process Started
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:45 - Method Execution Started - scanItem
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:80 - Method Execution Started - calculateTotalAmount
+2024-09-16 10:12:24 DEBUG CheckoutProcessorImpl:102 - Checkout Amount after scanning product [A] is:50.0
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:105 - Checkout Amount 50.0
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:107 - Method Execution Completed - calculateTotalAmount
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:71 - Method Execution Completed - scanItem
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:45 - Method Execution Started - scanItem
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:80 - Method Execution Started - calculateTotalAmount
+2024-09-16 10:12:24 DEBUG CheckoutProcessorImpl:102 - Checkout Amount after scanning product [A] is:100.0
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:105 - Checkout Amount 100.0
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:107 - Method Execution Completed - calculateTotalAmount
+2024-09-16 10:12:24 INFO  CheckoutProcessorImpl:71 - Method Execution Completed - scanItem
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:45 - Method Execution Started - scanItem
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:80 - Method Execution Started - calculateTotalAmount
+2024-09-16 10:12:25 DEBUG CheckoutProcessorImpl:102 - Checkout Amount after scanning product [A] is:150.0
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:105 - Checkout Amount 150.0
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:107 - Method Execution Completed - calculateTotalAmount
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:71 - Method Execution Completed - scanItem
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:45 - Method Execution Started - scanItem
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:80 - Method Execution Started - calculateTotalAmount
+2024-09-16 10:12:25 DEBUG CheckoutProcessorImpl:102 - Checkout Amount after scanning product [A] is:200.0
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:105 - Checkout Amount 200.0
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:107 - Method Execution Completed - calculateTotalAmount
+2024-09-16 10:12:25 INFO  CheckoutProcessorImpl:71 - Method Execution Completed - scanItem
+2024-09-16 10:12:26 INFO  CheckoutProcessorImpl:45 - Method Execution Started - scanItem
+2024-09-16 10:12:26 INFO  CheckoutProcessorImpl:80 - Method Execution Started - calculateTotalAmount
+2024-09-16 10:12:26 DEBUG CheckoutProcessorImpl:102 - Checkout Amount after scanning product [A] is:250.0
+2024-09-16 10:12:26 INFO  CheckoutProcessorImpl:105 - Checkout Amount 250.0
+2024-09-16 10:12:26 INFO  CheckoutProcessorImpl:107 - Method Execution Completed - calculateTotalAmount
+2024-09-16 10:12:26 INFO  CheckoutProcessorImpl:71 - Method Execution Completed - scanItem
+2024-09-16 10:12:29 INFO  CheckoutProcessorImpl:45 - Method Execution Started - scanItem
+2024-09-16 10:12:29 ERROR CheckoutProcessorImpl:68 - Exception while scanning product Sorry, item PAYDFSG is not available.Please Scan available items!
+com.cdl.supermarket.checkout.exception.InvalidCheckoutException: Sorry, item PAYDFSG is not available.Please Scan available items!
+	at com.cdl.supermarket.checkout.processor.impl.CheckoutProcessorImpl.scanItem(CheckoutProcessorImpl.java:64)
+	at com.cdl.supermarket.checkout.CheckoutApplication.handleItemScanProcess(CheckoutApplication.java:171)
+	at com.cdl.supermarket.checkout.CheckoutApplication.handleCheckoutProcess(CheckoutApplication.java:81)
+	at com.cdl.supermarket.checkout.CheckoutApplication.main(CheckoutApplication.java:46)
+2024-09-16 10:12:29 INFO  CheckoutProcessorImpl:80 - Method Execution Started - calculateTotalAmount
+2024-09-16 10:12:29 DEBUG CheckoutProcessorImpl:102 - Checkout Amount after scanning product [A] is:250.0
+2024-09-16 10:12:29 INFO  CheckoutProcessorImpl:105 - Checkout Amount 250.0
+2024-09-16 10:12:29 INFO  CheckoutProcessorImpl:107 - Method Execution Completed - calculateTotalAmount
+2024-09-16 10:12:29 INFO  CheckoutProcessorImpl:71 - Method Execution Completed - scanItem
+2024-09-16 10:12:35 INFO  CheckoutApplication:88 - Checkout Process Completed
+2024-09-16 10:12:37 INFO  CheckoutApplication:69 - Key entered is 3
+2024-09-16 10:12:37 INFO  CheckoutApplication:92 - Quit Application
+2024-09-16 10:12:37 INFO  CheckoutApplication:51 - Application completed Successfully
